@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/font-awesome/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/swiper-11.0.5/package/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/Pacifico-Regular.ttf">
+    <link rel="stylesheet" href="style.css">
+    <title>Restaurant</title>
+</head>
+<body>
+    <!-- HEADER  -->
+    <div id="header-placeholder">
+        <header id="header" class="fixed-header">
+            <div class="container">
+                <!-- Logo -->
+                <a href="index.html">
+                    <p>Restaurant</p>
+                </a>
+    
+                <!-- Nav menu -->
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li>
+                            <a href="#home" class="nav-link active" data-target="home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="nav-link" data-target="about">About</a>
+                        </li>
+                        <li>
+                            <a href="#menu" class="nav-link" data-target="menu">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#events" class="nav-link" data-target="events">Events</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav-link" data-target="contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <!-- Book btn -->
+                <a href="#booking" class="book-table-btn">Book a Table</a>
+    
+                <!-- Hamburger toggle -->
+                <div class="hamburger-icon" id="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    
+                <!-- Side menu -->
+                <div class="side-menu" id="side-menu">
+                    <button class="close-btn" id="close-btn">Close</button>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!--END HEADER  -->
+
+    <!-- HERO SECTION START -->
+    <div id="home">
+        <div  class="hero-section-bg">
+            <div class="hero-section">
+                <div class="hero-section__left-block">
+                    <h1>A Symphony of Flavors:<br> Where Elegance Meets Culinary Mastery</h1>
+                    <p>Welcome to a realm where culinary mastery meets refined elegance.<br>
+                        Our restaurant invites you to indulge in a symphony of flavors,<br> 
+                        meticulously crafted into each dish, promising a dining experience beyond compare.</p>
+                    <!-- Book btn -->
+                    <div class="book-btn-wrapper">
+                        <a href="#booking" class="book-table-hero-btn">Book a Table</a>
+                    </div>
+                </div>
+                <div class="hero-section__right-block">
+                    <figure>
+                        <img src="assets/images/rack-of-lamb.png" alt="Succulent rack of lamb dish with vegetables and potatoes">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HERO SECTION END -->
+
+    <!-- ABOUT US SECTION START -->
+    <section id="about">
+        <div class="about-us-section">
+            <!--About us title -->
+            <span>About Us</span>
+            <h2>Learn More</h2>
+
+            <!-- About us content -->
+            <div class="about-us-section__content">
+                <div class="about-us-section__content-left">
+                        <img src="assets/images/interior-images/restaurant-interior-2.png" alt="Elegant restaurant interior with stylish decor">
+                    <div class="about-us-section__book-number">
+                        <h3>Book a Table</h3>
+                        <p>+389 78 888 555</p>
+                    </div>
+                </div>
+                <div class="about-us-section__content-right">
+                    <p>Bitola's heart, our restaurant caters to fine dining enthusiasts with a menu celebrating global gastronomy. Our opulent space, reflecting luxury and attention to detail, provides a refined setting for any occasion.
+                    <br>
+                    <br>
+                    Committed to culinary excellence, our skilled chefs craft dishes as masterpieces, exceeding expectations with precision and passion. Complementing our menu, we offer an extensive selection of fine wines and spirits, expertly paired by knowledgeable sommeliers.
+                    <br>
+                    <br>
+                    Welcome to a realm where luxury and culinary mastery converge. Savor the extraordinary, revel in elegance, and embark on a gastronomic journey that transcends the ordinary. Each visit is a carefully crafted occasion to remember.</p>
+
+                    <div class="slider-container">
+                        <img src="assets/images/interior-images/Interior-slider.png" alt="Sleek and sophisticated dining area with contemporary design in a luxury restaurant." id="sliderImage" class="slider-image">
+                        <div class="open-gallery-desc" onclick="openModal()">
+                            <p>Click Here</p>
+                        </div>
+                    </div>
+                    
+                    <div id="imageModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+                            <img src="assets/images/interior-images/restaurant-interior-1.png" alt="Elegant modern furnishings and ambient lighting create a luxurious atmosphere in the restaurant interior." class="modal-image">
+                            <img src="assets/images/interior-images/restaurant-interior-2.png" alt="Chic and stylish decor in a high-end restaurant showcasing modern luxury interior design." class="modal-image">
+                            <img src="assets/images/interior-images/restaurant-interior-3.png" alt="A glimpse into the opulent ambiance of a modern restaurant featuring luxury interior details." class="modal-image">
+                            <img src="assets/images/interior-images/restaurant-interior-4.png" alt="Immersive modern interior design with upscale furnishings and tasteful decorations in a fine dining establishment." class="modal-image">
+                            <img src="assets/images/interior-images/restaurant-interior-5.png" alt="Luxurious restaurant setting with modern architecture, plush seating, and refined aesthetics." class="modal-image">
+                        </div>
+                        <span class="arrow" id="prevArrow" onclick="changeImage(-1)">&#9665;</span>
+                        <span class="arrow" id="nextArrow" onclick="changeImage(1)">&#9655;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT US SECTION START END -->
+
+    <!-- WHY US SECTION START -->
+    <div class="why-us__bg">
+        <div class="why-us__container">
+            <div class="why-us__wrapper">
+                <div class="why-us__main-card">
+                    <h3>Why Choose Restaurant?</h3>
+                    <p>Indulge your palate in a symphony of flavors meticulously crafted by our expert chefs. Every dish is a masterpiece, showcasing culinary excellence that transcends ordinary dining. Choose us for an extraordinary gastronomic experience that elevates fine dining to an art form.</p>
+                </div>
+                <div class="cards-wrapper">
+                    <div class="why-us__card">
+                        <img src="assets/images/wine-opener.png" alt="Vintage-style corkscrew for opening wine bottles.">
+                        <h4>Luxurious Ambiance</h4>
+                        <p>Immerse in opulence with refined decor and attentive service. Choose us for an unmatched, luxurious dining experience.</p>
+                    </div>
+                    <div class="why-us__card">
+                        <img src="assets/images/wine-opener.png" alt="Vintage-style corkscrew for opening wine bottles.">
+                        <h4>Fine Wine and Spirits</h4>
+                        <p>Elevate your meal with our curated selection of fine wines and spirits. Choose us for a memorable tasting journey that complements our exquisite menu.</p>
+                    </div>
+                    <div class="why-us__card">
+                        <img src="assets/images/wine-opener.png" alt="Vintage-style corkscrew for opening wine bottles.">
+                        <h4>Memorable Occasions</h4>
+                        <p>Celebrate in charm and sophistication. Ideal for any event, our restaurant ensures meticulously crafted occasions with a touch of luxury. Choose us for lasting memories.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- WHY US SECTION END -->
+
+    <!-- RESTAURANT STATS COUNTER SECTION START -->
+    <div id="statistic" class="statistic-section one-page-section">
+        <div class="parallax-bg"></div>
+        <div class="counter-wrapper">
+            <div class="counter">
+                <span class="timer count-title count-number">2000</span>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Food Plates</p>
+            </div>
+            <div class="counter">
+                <span class="timer count-title count-number">1000
+                </span>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Happy Clients</p>
+            </div>
+            <div class="counter">
+                <span class="timer count-title count-number">1</span>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Years of Existing</p>
+            </div>
+            <div class="counter">
+                <span class="timer count-title count-number">15</span>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Employes
+            </div>
+        </div>
+    </div>
+    <!-- RESTAURANT STATS COUNTER SECTION  END -->
+
+    <!-- RESTAURANT MENU SECTION START -->
+    <section id="menu">
+        <div class="menu-container">
+            <span>Our Menu</span>
+            <h2>Check Our</h2>
+            <div class="menu-tabs">
+                <a class="tab" onclick="openCategory('starters', this)">Starters</a>
+                <a class="tab" onclick="openCategory('pasta', this)">Pasta</a>
+                <a class="tab" onclick="openCategory('meat', this)">Meat</a>
+                <a class="tab" onclick="openCategory('dessert', this)">Dessert</a>
+
+            </div>
+            <div id="starters" class="menu-category">
+                <!-- Starter items go here -->
+                <div class="menu-items-wrapper">
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Starters/eggs-with-potatoes.jpg" alt="Plate of eggs and potatoes">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Eggs and potatoes</h4>
+                            <p class="ingredients">Eggs, baby potatoes, radish, <br> greens</p>
+                            <p class="price">4$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Starters/grilled-cheese.jpg" alt="Plate of cheese prepared on grill">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Grilled cheese</h4>
+                            <p class="ingredients">Cheese</p>
+                            <p class="price">3$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Starters/green-salad.jpg" alt="Plate of mixed green salad">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Green salad</h4>
+                            <p class="ingredients">Lettuce, red lettuce, rucola</p>
+                            <p class="price">4.5$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-items-wrapper">
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Starters/chicken-salad-with-goat-cheese.jpg" alt="Plate of chichen salad with goat cheese">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Chichen salad</h4>
+                            <p class="ingredients">Chicken, red lettuce, goat cheese, <br> sweet potato, rucola</p>
+                            <p class="price">6$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Starters/shimp-salad.jpg" alt="Plate of mixed vegetables with shrimp">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Shrimp salad</h4>
+                            <p class="ingredients">Shrimp, lettuce, red lettuce, <br> dressign</p>
+                            <p class="price">5$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Starters/ceasar-salad.jpg" alt="Plate of ceasar salad">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Ceasar salad</h4>
+                            <p class="ingredients">chicken, lettuce, parmesan, <br> dressing</p>
+                            <p class="price">5.5$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pasta" class="menu-category">
+                <!-- Pasta items go here -->
+                <div class="menu-items-wrapper">
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Pasta/black-pasta-shrimp.jpg" alt="Plate black spaghetti with shirpms">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Shrimp spaghetti</h4>
+                            <p class="ingredients">Black spaghetti, shrimp, <br> garlic, sauce, green beans</p>
+                            <p class="price">7$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Pasta/black-spaghetti-with-salmon.jpg" alt="Plate of black spaghetti with salmon">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Salmon spaghetti</h4>
+                            <p class="ingredients">Black spaghetti, salmon, <br> garlic, sauce</p>
+                            <p class="price">6.5$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Pasta/black-spaghetti-with-chopped-tuna.jpg" alt="Plate of black spaghetti with choped tuna">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Tuna spaghetti</h4>
+                            <p class="ingredients">Black spaghetti, tuna, <br> garlic, sauce</p>
+                            <p class="price">8$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-items-wrapper">
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Pasta/pesto-pasta.jpg" alt="Plate of rigatoni with pesto sauce">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Pesto rigatoni</h4>
+                            <p class="ingredients">Rigatoni, pesto sauce, <br> parmesan, garlic</p>
+                            <p class="price">5.5$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Pasta/spaghetti-carbonara.jpg" alt="Plate of carbonara spaghetti">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Carbonara spaghetti</h4>
+                            <p class="ingredients">Spaghetii, bacon, <br> bechamel sauce, parmesan</p>
+                            <p class="price">5$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Pasta/spaghetti-bolognese.jpg" alt="Plate of bolognese spaghetti">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Bolognese spaghetti</h4>
+                            <p class="ingredients">Spaghetti, meat, <br> tomato sauce, basil</p>
+                            <p class="price">6$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="meat" class="menu-category">
+                <!-- Meat items go here -->
+                <div class="menu-items-wrapper">
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Meat/rack-of-lamb.jpg" alt="Plate rack of lamb">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Rack of lamb</h4>
+                            <p class="ingredients">Lambs, vegetables, sauce, <br> potatoes</p>
+                            <p class="price">10$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Meat/medium-rare-steak.jpg" alt="Plate of medium rare steak">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Steak</h4>
+                            <p class="ingredients">Beef, mashed potatoes, sauce</p>
+                            <p class="price">12$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Meat/filet-mignon.jpg" alt="Plate of filet mignon">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Filet mignon</h4>
+                            <p class="ingredients">Beef, risotto, sauce</p>
+                            <p class="price">9.5$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-items-wrapper">
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Meat/salmon.jpg" alt="Plate of salmon">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Salmon</h4>
+                            <p class="ingredients">Salmon, fried cauliflower, <br> baby onion, green mayonnaise</p>
+                            <p class="price">8$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Meat/beef-burger.jpg" alt="Plate of beef burger">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Beef burger</h4>
+                            <p class="ingredients">Beef burger, lettuce, <br> cherry tomatoes, carrots</p>
+                            <p class="price">6.5$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Meat/grilled-meat.jpg" alt="Plate of grilled beef">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Grilled beef</h4>
+                            <p class="ingredients">Beef, french fries, <br> mushroom, mustard sauce</p>
+                            <p class="price">7$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dessert" class="menu-category">
+                <!-- Dessert items go here -->
+                <div class="menu-items-wrapper">
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Deseart/coconout-cake.jpg" alt="Plate of coconout cake">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Coconout cake</h4>
+                            <p class="ingredients">Coconout cream, Coconout flakes, <br> Coconout milk</p>
+                            <p class="price">5$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Deseart/raspberry-cup.jpg" alt="Plate of raspberry cup">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Raspberry cup</h4>
+                            <p class="ingredients">Raspberry cream, fresh raspberies, <br> mint</p>
+                            <p class="price">4$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Deseart/vanila-ice-cream.jpg" alt="Plate of vanilla ice cream">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Vanilla ice cream</h4>
+                            <p class="ingredients">Vanilla ice cream ball, hazelnuts, <br> mint</p>
+                            <p class="price">3.5$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-items-wrapper">
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Deseart/baked-pumpkin.jpg" alt="Plate of baked pumpkin">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Baked pumpkin</h4>
+                            <p class="ingredients">Pumpkin, vanila craem, red mint</p>
+                            <p class="price">3$</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <figure>
+                            <img src="assets/images/Deseart/wafle.jpg" alt="Plate of wafles">
+                        </figure>
+                        <div class="item-desc">
+                            <h4>Wafle</h4>
+                            <p class="ingredients">Wafle, blueberries, <br> blackberries, strawberries, honey</p>
+                            <p class="price">5.5$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- RESTAURANT MENU SECTION END -->
+
+    <!-- TESTIMONIALS SECTION START -->
+    <div class="testimonials__bg">
+        <div class="testimonials__container">
+            <span>Testimonials</span>
+            <h2>What are they</h2>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-content__left">
+                                <p>
+                                    <i class="fas fa-quote-left"></i>
+                                    Our dining experience at Restaurant was nothing short of extraordinary. The flavors and presentation of each dish were a culinary delight. The staff was attentive and friendly, making our evening truly special.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+                                <h4>Petar Pejkovski</h4>
+                                <p class="testimonial-jobtitle">Front-End Developer</p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-content__right">
+                                <figure>
+                                    <img src="assets/images/petar.png" alt="Portrait of Petar Pejkovski, Front-End Developer">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-content__left">
+                                <p>
+                                    <i class="fas fa-quote-left"></i>
+                                    As a family, we're always on the lookout for restaurants that cater to all ages, and Restaurant hit the mark! The kids loved the options, and the adults were impressed with the quality and variety. A family-friendly gem with yummy dishes for everyone.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+                                <h4>John Doe</h4>
+                                <p class="testimonial-jobtitle">Back-End Developer</p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-content__right">
+                                <figure>
+                                    <img src="assets/images/petar.png" alt="Portrait of John Doe, Back-End Developer">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-content__left">
+                                <p>
+                                    <i class="fas fa-quote-left"></i>
+                                    What a hidden gem! Restaurant offers a cozy atmosphere and a menu that's a feast for the senses. The food was not only delicious but also beautifully presented. It's the perfect place for a romantic dinner or a celebration with friends.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+                                <h4>Johnny Wall</h4>
+                                <p class="testimonial-jobtitle">Customer Support</p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-content__right">
+                                <figure>
+                                    <img src="assets/images/petar.png" alt="Portrait of Johnny Wall, Customer Support">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-content__left">
+                                <p>
+                                    <i class="fas fa-quote-left"></i>
+                                    We chose Restaurant for a special celebration, and it exceeded our expectations. The ambiance, the service, and, of course, the food made it a perfect venue for our special occasion. We left with memories we'll cherish forever.
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+                                <h4>Travis Mavis</h4>
+                                <p class="testimonial-jobtitle">Мartial Аrts</p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-content__right">
+                                <figure>
+                                    <img src="assets/images/petar.png" alt="Portrait of Travis Mavis, Мartial Аrts">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>    
+    <!-- TESTIMONIALS SECTION END -->
+
+    <!-- EVENTS SECTION START -->
+    <div class="events__container" id="events">
+        <span>Events</span>
+        <h2>Share your moments</h2>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="events__bday">
+                        <h3>Birthday Party</h3>
+                        <p>99$</p>
+                        <p>Celebrate your birthday with us for an unforgettable experience! Enjoy great food, delightful ambiance, and exceptional service. Book your celebration now and let the festivities begin!</p>
+                    </div>
+                </div>
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="events__anniversary">
+                        <h3>Anniversary Celebration</h3>
+                        <p>149$</p>
+                        <p>Mark the milestone with a fantastic anniversary celebration. Indulge in our special menu, romantic ambiance, and personalized service. Reserve your spot and make your anniversary memorable!</p>
+                    </div>
+                </div>
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="events__corporate">
+                        <h3>Corporate Event</h3>
+                        <p>Contact for Pricing</p>
+                        <p>Host your corporate events with us. We offer tailored packages, top-notch facilities, and a professional setting. Elevate your business gatherings with our venue and services.</p>
+                    </div>
+                </div>
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="events__special-ocasions">
+                        <h3>Special Occasion</h3>
+                        <p>Custom Pricing</p>
+                        <p>Whether it's a graduation, retirement, or any special occasion, celebrate it with us. Our team will work with you to create a customized experience. Let's make your special moments extraordinary!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- EVENTS SECTION END -->
+
+    <!--BOOK TABLE FORM START-->
+    <div id="booking">
+        <div class="booktable">
+            <div class="booktable__container">
+                <span>Book A Table</span>
+                <h2>Book Your Stay</h2>
+    
+                <div class="booktable__form-wrapper">
+                    <figure>
+                        <img src="assets/images/book-table.jpg" alt="A beautifully set table with reserved name tag, ready for a delightful dining experience.">
+                    </figure>
+                
+                    <form id="bookTableForm" action="process_form.php" method="post">
+                        <div class="booktable__inputs-wrapper"> 
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                            <input type="email" name="email" id="email" placeholder="Your e-mail" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" size="30" required />
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone number" patter ="[0-9]" required />
+                            <input type="date" id="date" name="date" required/>
+                            <input type="time" id="appt" name="appt" min="09:00" max="22:00" required />
+                            <input type="number" id="tentacles" name="tentacles" placeholder="Number of people" min="1" max="100" required/>
+                        </div>
+                        <!-- Textarea input -->
+                        <div class="booktable__textarea">
+                            <textarea name="message" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <!-- Book btn -->
+                        <div class="booktable__button-wrapper">
+                            <button type="submit" class="book-table-btn">Book a Table</button>
+                        </div>
+                    </form>
+                </div>            
+            </div>
+        </div>
+        
+        <div id="successMessage" style="display:none;"></div>
+    </div>
+    <!--BOOK TABLE FORM END-->
+
+    <!--CONTACT SECTION START-->
+    <div id="contact">
+        <div class="contact" >
+            <div class="contact__container">
+                <span>Contact</span>
+                <h2>Need help?</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6019.5548540007185!2d21.3310352222651!3d41.03012514551549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1smk!2smk!4v1704892682874!5m2!1smk!2smk" width="600" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="contact__info-wrapper">
+                    <div class="info-item">
+                        <div class="info-item__icon-wrap">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>Square Magnolia</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item__icon-wrap">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <div class="info-item__link-wrap">
+                                <a href="mailto:restaurant@gmail.com">restaurant@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item__icon-wrap">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Call Us</h3>
+                            <div class="info-item__link-wrap">
+                                <a href="tel:+38978888555">+389 78 888 555</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item__icon-wrap">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <div class="info-item__content-wrap">
+                            <h3>Opening Hours</h3>
+                            <p>Mon-Sat: 09AM - 22PM, Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--CONTACT SECTION END-->
+
+    <!--FOOTER SECTION START-->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__wrapper">
+                <div class="footer__content-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h6>Adresss</h6>
+                        <p>Square Magnolia</p>
+                    </div>
+                </div>
+                <div class="footer__content-item">
+                    <i class="fa-solid fa-lg fa-phone"></i>
+                    <div>
+                        <h6>Reservation</h6>
+                        <div class="footer__contact-info">
+                            <p>Phone: </p>
+                            <a href="tel:+38978888555">+389 78 888 555</a>
+                        </div>
+                        <div class="footer__contact-info">
+                            <p>Email: </p>
+                            <a href="mailto:restaurant@gmail.com">restaurant@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__content-item">
+                    <i class="fa-solid fa-lg fa-clock"></i>
+                    <div>
+                        <h6>Opening Hours</h6>
+                        <p>Mon-Sat: 09AM - 22PM</p>
+                        <p>Sun: Closed</p>
+                    </div>
+                </div>
+                <div class="footer__content-item">
+                    <div>
+                        <h6>Follow Us</h6>
+                        <div class="footer__social-links-wrapper">
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer__copyright">
+                <p>&copy; 2024 Restaurant. All rights reserved.</p>
+                <p>Made by Petar</p>
+            </div>
+        </div>
+    </footer>
+    <!--FOOTER SECTION END-->
+
+    <script src="assets/swiper-11.0.5/package/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
