@@ -295,3 +295,66 @@ const customCloseModal = () => {
       location.reload();
   }, 500);
 };
+
+// Listen for the DOMContentLoaded event to ensure the document is fully loaded before executing JavaScript.
+document.addEventListener('DOMContentLoaded', function() {
+    // Check and display the cookie banner on page load.
+    showCookieBanner();
+});
+
+// Function to check if the user has accepted cookies
+function hasAcceptedCookies() {
+    return getCookie('cookiesAccepted') === 'true';
+}
+
+// Function to show or hide the cookie banner based on acceptance
+function showCookieBanner() {
+    const cookieBanner = document.getElementById('cookie-banner');
+    cookieBanner.classList.toggle('show', !hasAcceptedCookies()); // Toggle 'show' class based on acceptance
+}
+
+// Function to set cookiesAccepted to true when the user clicks Accept
+function acceptCookies() {
+    setCookie('cookiesAccepted', 'true', 365);
+    showCookieBanner();
+}
+
+// Function to delete cookiesAccepted when the user clicks Revoke
+function revokeCookies() {
+    if (hasAcceptedCookies()) {
+        deleteCookie('cookiesAccepted');
+    }
+
+    // Manually hide the banner by removing the 'show' class
+    document.getElementById('cookie-banner').classList.remove('show');
+}
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+    const expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + days);
+
+    const cookieString = `${name}=${value};expires=${expirationDate.toUTCString()};path=/`;
+
+    document.cookie = cookieString;
+}
+
+// Function to get the value of a cookie
+function getCookie(name) {
+    const cookies = document.cookie.split('; ');
+
+    for (const cookie of cookies) {
+        const [cookieName, cookieValue] = cookie.split('=');
+
+        if (cookieName === name) {
+            return cookieValue;
+        }
+    }
+
+    return null;
+}
+
+// Function to delete a cookie
+function deleteCookie(name) {
+    document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;`;
+}
